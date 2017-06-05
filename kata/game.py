@@ -3,15 +3,9 @@ class Game(object):
         self.actual_play = 0
 
     def record_roll(self, num_pins_knocked):
-        if num_pins_knocked == 0:
-            self.actual_play = 0
-        else:
-            self.actual_play = 150
+        self.actual_play += num_pins_knocked
 
     def get_score(self):
-        if self.actual_play == 0:
-            return 0
-        else:
-            return self.actual_play
+        return self.actual_play
 
 
